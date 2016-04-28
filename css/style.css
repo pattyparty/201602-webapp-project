@@ -10,7 +10,7 @@ h1 {
     color: #F5D68E;
     text-align: center;
     background-color: #3B3937;
-    line-height: 200%;
+    line-height: 400%;
     z-index: 10;
 
 }
@@ -20,7 +20,7 @@ h2 {
     top: 150px;
     width: 100%;
     background-color: #3B3937;
-    z-index: 2;
+    z-index: 10;
 
 }
 
@@ -91,8 +91,8 @@ div.right {
 
 #CourseChart {
     position: relative;
-    left: 14.5%;
-    top: 50px;
+    left: 15%;
+    top: 119px;
     width:84%;
     z-index: 3;
     color: #F5D68E;
@@ -113,4 +113,11 @@ th{
 height: 50px;
 font-size: 150%;
 background-color: #3B3937;
+}
+
+#Tiger {
+    position: fixed;
+    top:0%;
+    left:0%;
+
 }
