@@ -81,11 +81,16 @@ div.left {
     word-spacing: 25px;
 }
 
-#Course Chart{
+div.right {
     position: relative;
-    left: 15%;
-    color: #F5D68E;
-    background-color: #3B3937;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    z-index:4
+    right: 0%;
+    width: 5%;
+    z-index: 3;
+}
+
+#Course Chart{
+    table{
+    position: relative;
+
+    }
 }
