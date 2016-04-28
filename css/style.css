@@ -88,6 +88,9 @@ div.right {
 }
 
 #CourseChart {
+    position: relative;
+    left: 14.5%;
     z-index: 1;
     color: #F5D68E;
+    background-color: #3B3937;
 }
