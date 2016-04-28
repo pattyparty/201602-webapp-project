@@ -1,7 +1,7 @@
 from os import chdir
 from os.path import dirname, realpath
 
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 
 app = Flask(__name__)
 
@@ -89,7 +89,7 @@ def divide(str):
 
 
 def get_course_counts():
-    course_counts = Course_Counts
+    coursecounts = Course_Counts()
     with open('counts.tsv') as fd:
         for line in fd.read().splitlines():
             fields = line.split('\t')
@@ -104,13 +104,15 @@ def get_course_counts():
             course.reserved = fields[12]
             course.reservedOpen = fields[13]
             course.waitlisted = fields[14]
-            course_counts.append(course)
-    return course_counts
+            coursecounts.course_counts.append(course)
+    return coursecounts
 
+course_counts = get_course_counts()
 @app.route('/')
 def view_root():
     return render_template('base.html')
-
+def get_course_list():
+    return course_counts.search_by_semester(request.args.get('semester'))
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.
 
