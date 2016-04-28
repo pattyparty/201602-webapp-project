@@ -3,25 +3,29 @@ body {
 }
 
 h1 {
-    position: relative;
+    position: fixed;
     top: -21px;
+    width: 100%;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: #F5D68E;
     text-align: center;
     background-color: #3B3937;
     line-height: 200%;
+    z-index: 10;
 
 }
 
 h2 {
-    position: relative;
-    top: -45px;
+    position: fixed;
+    top: 44px;
+    left: 0%;
+    width: 100%;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: #F5D68E;
     text-align: center;
     background-color: #3B3937;
     line-height: 200%;
-    word-spacing: 50px;
+    z-index: 10;
 }
 
 #weekdays p {
@@ -53,8 +57,9 @@ div.left {
 }
 
 #Seal{
-    position: relative;
-    top: -30px;
+    position: fixed;
+    top: 25%;
+    left: 33%;
     text-align: center;
     opacity: .25;
     z-index:1;
@@ -91,9 +96,10 @@ div.right {
 #CourseChart {
     position: relative;
     left: 14.5%;
-    top: -60px;
-    z-index: 1;
+    top: 150px;
+    z-index: 3;
     color: #F5D68E;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     background-color: transparent;
+
 }
