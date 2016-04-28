@@ -17,15 +17,11 @@ h1 {
 
 h2 {
     position: fixed;
-    top: 44px;
-    left: 0%;
+    top: 150px;
     width: 100%;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    color: #F5D68E;
-    text-align: center;
     background-color: #3B3937;
-    line-height: 200%;
-    z-index: 10;
+    z-index: 2;
+
 }
 
 #weekdays p {
@@ -96,10 +92,25 @@ div.right {
 #CourseChart {
     position: relative;
     left: 14.5%;
-    top: 150px;
+    top: 50px;
+    width:84%;
     z-index: 3;
     color: #F5D68E;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     background-color: transparent;
+    text-align: center;
 
+}
+
+#CourseChart table {
+    border-collapse:collapse;
+}
+
+tr:hover{background-color: #3B3937
+
+}
+th{
+height: 50px;
+font-size: 150%;
+background-color: #3B3937;
 }
