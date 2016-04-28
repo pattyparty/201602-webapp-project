@@ -7,6 +7,9 @@ app = Flask(__name__)
 
 # FIXME write your app below
 
+
+
+
 @app.route('/')
 def view_root():
     return render_template('base.html')
