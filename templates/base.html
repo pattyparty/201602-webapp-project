@@ -31,9 +31,9 @@
             <br>
             <br>
             <br>
-            <form action method="get">
-                <tr> Search by Semester</tr> <br>
-            <select id="semester" name="semester">
+            <br>
+            <tr> Search by Semester</tr> <br>
+            <select id="semester">
                <option value>(any)</option>
                 <option value="201701">2017 Spring </option>
                 <option value="201702" selected>2016
@@ -112,6 +112,8 @@
                 <option value="THEA">Theater</option>
                 <option value="UEP">Urban and Environmental Policy</option>
                 <option value="WRD">Writing and Rhetoric</option>
+
+
             </select>
             <br>
             <br>
@@ -139,10 +141,9 @@
             </select>
             <br>
             <input id="searchButton" class="large" type="submit" value="Search">
-
-            </form>
         </table>
     </div>
+   <!---left ends --->
 
     <div id="Courses">
         <p>Courses</p>
@@ -155,18 +156,13 @@
     <div id="Course Chart">
         <table style="width: 85%">
             <table id="results-table">
-                {% for course in result_list %}
                 <tr>
-                     <p><a href="/base/{{ course.year }} {{ course.title }}">{{ course.department }} {{ course.number }}</a></p>
+                    <th>
+                        <a href="sem_list(get_semester());">Semester</a>
+                    </th>
                 </tr>
-                {% endfor %}
             </table>
         </table>
     </div>
-
-    <div class ="right">
-        <table style="width: 15%"> </table>
-    </div>
-
 </body>
 </html>
