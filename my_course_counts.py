@@ -107,11 +107,11 @@ def get_course_counts():
             coursecounts.course_counts.append(course)
     return coursecounts
 
+
 course_counts = get_course_counts()
 @app.route('/')
 def view_root():
     ans_list = course_counts.search_by_semester(request.args.get('semester'))
-    print(ans_list)
     return render_template('base.html', result_list=ans_list)
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.

@@ -34,10 +34,9 @@
             <form action method="get">
                 <tr> Search by Semester</tr> <br>
             <select id="semester" name="semester">
-               <option value>(any)</option>
+                <option value = "">(any)</option>
                 <option value="201701">2017 Spring </option>
-                <option value="201702" selected>2016
-                Fall</option>
+                <option value="201702">2016 Fall</option>
                 <option value="201602">2016 Spring</option>
                 <option value="201701">2015 Fall</option>
                 <option value="201503">2015 Summer</option>
@@ -157,16 +156,11 @@
             <table id="results-table">
                 {% for course in result_list %}
                 <tr>
-                     <p><a href="/base/{{ course.year }} {{ course.title }}">{{ course.department }} {{ course.number }}</a></p>
+                     <td><p><a href="/base/{{ course.year }} {{ course.title }}">{{ course.department }} {{ course.number }}</a></p></td>
                 </tr>
                 {% endfor %}
             </table>
         </table>
     </div>
-
-    <div class ="right">
-        <table style="width: 15%"> </table>
-    </div>
-
 </body>
 </html>
