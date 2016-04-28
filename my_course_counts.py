@@ -55,6 +55,9 @@ class Course_Counts:
 
 def get_course_counts():
 
+
+
+
 @app.route('/')
 def view_root():
     return render_template('base.html')

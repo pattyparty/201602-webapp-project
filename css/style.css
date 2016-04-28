@@ -3,6 +3,8 @@ body {
 }
 
 h1 {
+    position: relative;
+    top: -21px;
     font-family: "Courier New", Courier, monospace;
     color: #F5D68E;
     text-align: center;
@@ -12,11 +14,26 @@ h1 {
 }
 
 h2 {
+    position: relative;
+    top: -43px;
     font-family: "Courier New", Courier, monospace;
     color: #F5D68E;
     text-align: center;
     background-color: #3B3937;
     line-height: 200%;
+}
+
+#weekdays p {
+    position: relative;
+    top: -67px;
+    left:14%;
+    color: #F5D68E;
+    background-color: #3B3937;
+    word-spacing: 50px;
+    font-size: 150%;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    width:86%;
 }
 
 
@@ -33,16 +50,10 @@ div.left {
     font-family: "Courier New", Courier, monospace;
 }
 
-p1 {
+#Seal{
     position: relative;
-    left: 23%;
-    color: #F5D68E;
-    background-color: #3B3937;
-    word-spacing: 50px;
-    font-size: 150%;
-    font-family: "Courier New", Courier, monospace;
+    top: -30px;
+    text-align: center;
+    opacity: .25;
 }
 
-table{
-    background-color: #3B3937;
-}
