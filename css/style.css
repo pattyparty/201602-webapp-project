@@ -5,7 +5,7 @@ body {
 h1 {
     position: relative;
     top: -21px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: #F5D68E;
     text-align: center;
     background-color: #3B3937;
@@ -16,7 +16,7 @@ h1 {
 h2 {
     position: relative;
     top: -43px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: #F5D68E;
     text-align: center;
     background-color: #3B3937;
@@ -32,7 +32,7 @@ h2 {
     word-spacing: 50px;
     font-size: 150%;
     text-align: center;
-    font-family: "Courier New", Courier, monospace;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     width:86%;
 }
 
@@ -47,7 +47,8 @@ div.left {
     text-align: center;
     line-height: 200%;
     color: #F5D68E;
-    font-family: "Courier New", Courier, monospace;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    z-index:2
 }
 
 #Seal{
@@ -55,5 +56,36 @@ div.left {
     top: -30px;
     text-align: center;
     opacity: .25;
+    z-index:1;
 }
 
+#Courses{
+    position: relative;
+    text-align: center;
+    color: #F5D68E;
+    background-color: #3B3937;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 150%;
+    line-height: 200%;
+}
+
+#Info{
+    position: relative;
+    top: -25px;
+    text-align: center;
+    color: #F5D68E;
+    background-color: #3B3937;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 150%;
+    line-height: 200%;
+    word-spacing: 25px;
+}
+
+#Course Chart{
+    position: relative;
+    left: 15%;
+    color: #F5D68E;
+    background-color: #3B3937;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    z-index:3
+}
