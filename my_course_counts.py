@@ -66,7 +66,7 @@ class Course_Counts:
                 sem_num += '03'
             if sem == sem_num:
                 ans_list.append(course)
-        return ans_list
+        return render_template('base.html', )
 
     def search_by_core(self, core):
         ans_list = []

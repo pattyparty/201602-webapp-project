@@ -33,7 +33,7 @@
             <br>
             <br>
             <tr> Search by Semester</tr> <br>
-            <select name="semester">
+            <select id="semester">
                <option value>(any)</option>
                 <option value="201701">2017 Spring </option>
                 <option value="201702" selected>2016
@@ -139,6 +139,8 @@
                 <option value="CUSP">Core United States (obsolete)</option>
                 <option value="CPUD">Core United States Diversity</option>
             </select>
+            <br>
+            <input id="searchButton" class="large" type="submit" value="Search">
         </table>
     </div>
 
@@ -152,14 +154,13 @@
 
     <div id="Course Chart">
         <table style="width: 85%">
-            <tr>
-                <td>Course</td>
-                <td>Title</td>
-                <td>Units</td>
-                <td>Instructor</td>
-                <td>Meeting Times (Room)</td>
-                <td>Core</td>
-            </tr>
+            <table id="results-table">
+                <tr>
+                    <th>
+                        <a href="sem_list(get_semester());">Semester</a>
+                    </th>
+                </tr>
+            </table>
         </table>
     </div>
 </body>
