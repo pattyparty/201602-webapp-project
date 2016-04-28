@@ -106,6 +106,17 @@ div.right {
     border-collapse:collapse;
 }
 
+a:link {
+color: #BF5513;
+}
+a:visited {
+color: #DB6014;
+}
+a:hover {
+color: #DB6014;
+}
+
+
 tr:hover{background-color: #3B3937
 
 }
