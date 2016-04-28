@@ -52,9 +52,20 @@ class Course:
 
 class Course_Counts:
     def __init__(self):
-        self.Class = []
+        self.course_counts = []
+
     def search_by_semester(self, sem):
-        pass
+        ans_list = []
+        for course in self.course_counts:
+            sem_num = course.year
+            if course.season == 'fall':
+                sem_num += '01'
+            elif course.season == 'spring':
+                sem_num += '02'
+            else:
+                sem_num += '03'
+            if sem == sem_num:
+                ans_list.append(course)
     def search_by_core(self, core):
         pass
     def search_by_subject(self, sub):
