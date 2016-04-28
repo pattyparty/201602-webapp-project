@@ -53,26 +53,41 @@ class Course:
 class Course_Counts:
     def __init__(self):
         self.course_counts = []
-
+# looks at the semester of the course in course_count based on the drop down menu's value
     def search_by_semester(self, sem):
         ans_list = []
+        list_of_classes = []
         for course in self.course_counts:
             sem_num = course.year
             if course.season == 'fall':
                 sem_num += '01'
+                list_of_classes.append[course]
+                return list_of_classes
             elif course.season == 'spring':
                 sem_num += '02'
+                list_of_classes.append[course]
+                return list_of_classes
             else:
                 sem_num += '03'
+                list_of_classes.append[course]
+                return list_of_classes
             if sem == sem_num:
                 ans_list.append(course)
-        return render_template('base.html', )
+        #return render_template('base.html', ),list_of_classes
+        for classes in list_of_classes:
+            if list_of_classes[2]== department_of_the_drop_down_menu:
+                correct_list_of_classes.append[classes]
+                print(correct_list_of_classes)
+            return correct_list_of_classes, render_template('base.html', )
+
+
 
     def search_by_core(self, core):
         ans_list = []
         for course in self.course_counts:
             if course.core == core:
                 ans_list.append(course)
+                print(ans_list)
         return ans_list
 
     def search_by_subject(self, sub):
@@ -80,6 +95,7 @@ class Course_Counts:
         for course in self.course_counts:
             if course.subject == sub:
                 ans_list.append(course)
+                print(ans_list)
         return ans_list
 
 
@@ -107,6 +123,7 @@ def get_course_counts():
             course_counts.append(course)
     return course_counts
 
+'''
 def find_course_from_semester(course_counts):
     for course in course_counts:
         for info in course:
@@ -117,7 +134,7 @@ def find_course_from_semester(course_counts):
             print(department+"_"+season+year)
             return (department+"_"+season + year)
 
-
+'''
 
 
 @app.route('/')
@@ -142,3 +159,11 @@ def get_js(file):
 if __name__ == '__main__':
     chdir(dirname(realpath(__file__)))
     app.run(debug=True)
+
+
+'''
+def main():
+   if semester != None
+       Course.
+    pass
+'''
