@@ -18,9 +18,35 @@
 
     <div id="CourseChart">
         <table style="width: 85%">
+            <tr>
+                <th>
+                    Number
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Unit
+                </th>
+                <th>
+                    Number
+                </th>
+                    Instructors
+                </tr>
+                <th>
+                    Meeting
+                </th>
+                <th>
+                    Core
+                </th>
                 {% for course in result_list %}
                 <tr>
-                     <td><p><a href="/base/{{ course.year }} {{ course.title }}"> {{ course.department }} {{ course.number }}</a></p></td>
+                     <td><a href="/base/{{ course.year }} {{ course.title }}"> {{ course.department }} {{ course.number }}</a></td>
+                    <td>{{ course.title }}</td>
+                    <td>{{ course.unit }}</td>
+                    <td>{{ course.instructors }}</td>
+                    <td>{{ course.meeting }}</td>
+                    <td>{{ course.core }}</td>
                 </tr>
                 {% endfor %}
             </table>
