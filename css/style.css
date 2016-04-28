@@ -21,6 +21,7 @@ h2 {
     text-align: center;
     background-color: #3B3937;
     line-height: 200%;
+    word-spacing: 50px;
 }
 
 #weekdays p {
@@ -90,6 +91,7 @@ div.right {
 #CourseChart {
     position: relative;
     left: 14.5%;
+    top: -60px;
     z-index: 1;
     color: #F5D68E;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;

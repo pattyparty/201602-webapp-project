@@ -10,12 +10,25 @@
 
 <h1> OCCIDENTAL COLLEGE COURSE COUNTS 2.0</h1>
 
-<h2> Your Potential Schedule:</h2>
+<h2>
+         <p>Course Title Units Instructor Meeting Times (Room) Core</p>
+    </h2>
+
+    <div id="CourseChart">
+        <table style="width: 85%">
+                {% for course in result_list %}
+                <tr>
+                     <td><p><a href="/base/{{ course.year }} {{ course.title }}"> {{ course.department }} {{ course.number }}</a></p></td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+<!---<h2> Your Potential Schedule:</h2>
 
     <div id="weekdays">
 
     <p> Monday Tuesday Wednesday Thursday Friday &nbsp;&nbsp;</p>
-    </div>
+    </div> --->
 
 <body>
    <div id="Seal">
@@ -143,24 +156,19 @@
         </table>
     </div>
 
-    <div id="Courses">
-        <p>Courses</p>
-    </div>
-
-    <div id="Info">
+<!---    <div id="Info">
          <p>Course Title Units Instructor Meeting Times (Room) Core</p>
         </div>
 
-    <div id="Course Chart">
+    <div id="CourseChart">
         <table style="width: 85%">
-            <table id="results-table">
                 {% for course in result_list %}
+                <td>Course Title Units Instructor Meeting Times (Room) Core</td>
                 <tr>
-                     <td><p><a href="/base/{{ course.year }} {{ course.title }}">{{ course.department }} {{ course.number }}</a></p></td>
+                     <td><p><a href="/base/{{ course.year }} {{ course.title }}"> {{ course.department }} {{ course.number }}</a></p></td>
                 </tr>
                 {% endfor %}
             </table>
-        </table>
-    </div>
+    </div> --->
 </body>
 </html>
