@@ -107,6 +107,19 @@ def get_course_counts():
             course_counts.append(course)
     return course_counts
 
+def find_course_from_semester(course_counts):
+    for course in course_counts:
+        for info in course:
+            year = course_counts[0]
+            season = course_counts[1]
+            department = course_counts[2]
+            #the information is what we use for the lists of the classes for that department for that semester
+            print(department+"_"+season+year)
+            return (department+"_"+season + year)
+
+
+
+
 @app.route('/')
 def view_root():
     return render_template('base.html')
