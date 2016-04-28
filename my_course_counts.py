@@ -54,6 +54,20 @@ class Course_Counts:
 
 
 def get_course_counts():
+    Subject.department
+class Subject:
+    def __init__(self, department, semester):
+        dictionary = dictionary = {"Fall 2017":"f2017","Spring 2016":"S2016", "Fall 2016":"f2016",
+                      "Spring 2015":"s2015", "Fall 2015":"f2015","Spring 2014":"s2014",
+                      "Fall 2014":"f2014","Spring 2013":"s2013","Fall 2013":"f2013",
+                      "Spring 2012":"s2012", "Fall 2012":"f2012", "Spring 2011":"s2011",
+                      "Fall 2011":"f2011","Spring 2010":"s2010","Fall 2010":"f2010"}
+        self.department = department
+        self.semester = semester
+        if (semester == dictionary.keys):
+            course_code = department+"_"+dictionary.values()
+            print(course_code)
+            return course_code
 
 
 
