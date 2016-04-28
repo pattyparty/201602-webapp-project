@@ -49,6 +49,13 @@ class Course:
         self.reserved = ''
         self.reservedOpen = ''
         self.waitlisted = ''
+        self.id = ''
+    def get_department_number(self):
+        number = ''
+        number += self.department + self.number
+        return number
+    def generate_id(self):
+        self.id = self.year + self.season + self.department + self.number
 
 class Course_Counts:
     def __init__(self):
@@ -82,6 +89,14 @@ class Course_Counts:
                 ans_list.append(course)
         return ans_list
 
+    def find_course(self, sem_num, department, number):
+        year_list = self.search_by_semester(sem_num)
+        for index in range(0, len(year_list)):
+            if year_list[index].department == department and year_list[index].number == number:
+                return year_list[index]
+
+
+
 
 def divide(str):
     list = str.split(' ')
@@ -104,6 +119,7 @@ def get_course_counts():
             course.reserved = fields[12]
             course.reservedOpen = fields[13]
             course.waitlisted = fields[14]
+            course.generate_id()
             coursecounts.course_counts.append(course)
     return coursecounts
 
@@ -115,6 +131,13 @@ def view_root():
     return render_template('base.html', result_list=ans_list)
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.
+
+@app.route('/base/<id>')
+def view_course(id):
+    for course in course_counts.course_counts:
+        if course.id == id:
+            return render_template('course.html', course=course)
+
 
 @app.route('/images/<file>')
 def get_image(file):
