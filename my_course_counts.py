@@ -66,6 +66,8 @@ class Course_Counts:
                 sem_num += '03'
             if sem == sem_num:
                 ans_list.append(course)
+        return ans_list
+    
     def search_by_core(self, core):
         pass
     def search_by_subject(self, sub):
