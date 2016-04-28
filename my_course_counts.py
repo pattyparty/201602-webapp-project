@@ -52,16 +52,38 @@ class Course:
 
 class Course_Counts:
     def __init__(self):
-        self.Class = []
+        self.course_counts = []
+
     def search_by_semester(self, sem):
-        pass
+        ans_list = []
+        for course in self.course_counts:
+            sem_num = course.year
+            if course.season == 'fall':
+                sem_num += '01'
+            elif course.season == 'spring':
+                sem_num += '02'
+            else:
+                sem_num += '03'
+            if sem == sem_num:
+                ans_list.append(course)
+        return ans_list
+
     def search_by_core(self, core):
-        pass
+        ans_list = []
+        for course in self.course_counts:
+            if course.core == core:
+                ans_list.append(course)
+        return ans_list
+
     def search_by_subject(self, sub):
-        pass
+        ans_list = []
+        for course in self.course_counts:
+            if course.subject == sub:
+                ans_list.append(course)
+        return ans_list
 
 
-def meeting_divide(str):
+def divide(str):
     list = str.split(' ')
     return list
 
@@ -74,9 +96,9 @@ def get_course_counts():
             course = Course(fields[0], fields[1], fields[2], fields[3], fields[4])
             course.title = fields[5]
             course.unit = fields[6]
-            course.instructor = fields[7]
-            course.meetings = meeting_divide(fields[8])
-            course.core = fields[9]
+            course.instructor = divide(fields[7])
+            course.meetings = divide(fields[8])
+            course.core = divide(fields[9])
             course.seats = fields[10]
             course.enrolled = fields[11]
             course.reserved = fields[12]
