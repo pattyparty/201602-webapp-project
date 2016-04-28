@@ -15,7 +15,7 @@ h1 {
 
 h2 {
     position: relative;
-    top: -43px;
+    top: -45px;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: #F5D68E;
     text-align: center;
@@ -93,5 +93,5 @@ div.right {
     z-index: 1;
     color: #F5D68E;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    background-color: #3B3937;
+    background-color: transparent;
 }
