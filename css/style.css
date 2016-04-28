@@ -85,12 +85,9 @@ div.right {
     position: relative;
     right: 0%;
     width: 5%;
-    z-index: 3;
 }
 
-#Course Chart{
-    table{
-    position: relative;
-
-    }
+#CourseChart {
+    z-index: 1;
+    color: #F5D68E;
 }
