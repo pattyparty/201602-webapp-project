@@ -66,7 +66,7 @@ class Course_Counts:
                 sem_num += '03'
             if sem == sem_num:
                 ans_list.append(course)
-        return render_template('base.html', )
+        return ans_list
 
     def search_by_core(self, core):
         ans_list = []
@@ -110,9 +110,9 @@ def get_course_counts():
 course_counts = get_course_counts()
 @app.route('/')
 def view_root():
-    return render_template('base.html')
-def get_course_list():
-    return course_counts.search_by_semester(request.args.get('semester'))
+    ans_list = course_counts.search_by_semester(request.args.get('semester'))
+    print(ans_list)
+    return render_template('base.html', result_list=ans_list)
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.
 
