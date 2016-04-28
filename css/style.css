@@ -7,7 +7,7 @@ h1 {
     top: -21px;
     width: 100%;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    color: #F5D68E;
+    color: #F0AE6C;
     text-align: center;
     background-color: #3B3937;
     line-height: 200%;
@@ -21,7 +21,7 @@ h2 {
     left: 0%;
     width: 100%;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    color: #F5D68E;
+    color: #F0AE6C;
     text-align: center;
     background-color: #3B3937;
     line-height: 200%;
@@ -51,7 +51,7 @@ div.left {
     background-color: #3B3937;
     text-align: center;
     line-height: 200%;
-    color: #F5D68E;
+    color: #F0AE6C;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     z-index:2
 }
@@ -61,7 +61,7 @@ div.left {
     top: 25%;
     left: 33%;
     text-align: center;
-    opacity: .25;
+    opacity: .20;
     z-index:1;
 }
 
@@ -98,7 +98,7 @@ div.right {
     left: 14.5%;
     top: 150px;
     z-index: 3;
-    color: #FF77O5;
+    color: #52372F;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     background-color: transparent;
 
