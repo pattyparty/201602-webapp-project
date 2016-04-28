@@ -11,13 +11,11 @@
 <h1> OCCIDENTAL COLLEGE COURSE COUNTS 2.0</h1>
 
 <h2>
-         <p>Course &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             Units &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             Meeting Times (Room) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Core&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </h2>
+
+</h2>
 
     <div id="CourseChart">
-        <table style="width: 85%">
+        <table>
             <tr>
                 <th>
                     Number
@@ -29,16 +27,15 @@
                     Unit
                 </th>
                 <th>
-                    Number
-                </th>
                     Instructors
-                </tr>
+                </th>
                 <th>
                     Meeting
                 </th>
                 <th>
                     Core
                 </th>
+            </tr>
                 {% for course in result_list %}
                 <tr>
                      <td><a href="/base/{{ course.year }} {{ course.title }}"> {{ course.department }} {{ course.number }}</a></td>
