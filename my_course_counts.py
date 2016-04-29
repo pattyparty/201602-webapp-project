@@ -58,36 +58,45 @@ class Course:
         self.id = self.year + self.season + self.department + self.number
 
 class Course_Counts:
-    def __init__(self):
-        self.course_counts = []
+    def __init__(self, list):
+        self.course_counts = list
 
     def search_by_semester(self, sem):
         ans_list = []
-        for course in self.course_counts:
-            sem_num = course.year
-            if course.season == 'fall':
-                sem_num += '01'
-            elif course.season == 'spring':
-                sem_num += '02'
-            else:
-                sem_num += '03'
-            if sem == sem_num:
-                ans_list.append(course)
-        return ans_list
+        if sem == '':
+            return self.course_counts
+        else:
+            for course in self.course_counts:
+                sem_num = course.year
+                if course.season == 'fall':
+                    sem_num += '01'
+                elif course.season == 'spring':
+                    sem_num += '02'
+                else:
+                    sem_num += '03'
+                if sem == sem_num:
+                    ans_list.append(course)
+            return ans_list
 
     def search_by_core(self, core):
         ans_list = []
-        for course in self.course_counts:
-            if course.core == core:
-                ans_list.append(course)
-        return ans_list
+        if core == '':
+            return self.course_counts
+        else:
+            for course in self.course_counts:
+                if course.core == core:
+                    ans_list.append(course)
+            return ans_list
 
     def search_by_subject(self, sub):
         ans_list = []
-        for course in self.course_counts:
-            if course.subject == sub:
-                ans_list.append(course)
-        return ans_list
+        if sub == '':
+            return self.course_counts
+        else:
+            for course in self.course_counts:
+                if course.department == sub:
+                    ans_list.append(course)
+            return ans_list
 
     def find_course(self, sem_num, department, number):
         year_list = self.search_by_semester(sem_num)
@@ -96,15 +105,13 @@ class Course_Counts:
                 return year_list[index]
 
 
-
-
 def divide(str):
     list = str.split(' ')
     return list
 
 
 def get_course_counts():
-    coursecounts = Course_Counts()
+    coursecounts = Course_Counts([])
     with open('counts.tsv') as fd:
         for line in fd.read().splitlines():
             fields = line.split('\t')
@@ -123,12 +130,16 @@ def get_course_counts():
             coursecounts.course_counts.append(course)
     return coursecounts
 
-
 course_counts = get_course_counts()
 @app.route('/')
 def view_root():
-    ans_list = course_counts.search_by_semester(request.args.get('semester'))
-    return render_template('base.html', result_list=ans_list)
+    ans_list_by_sem = course_counts.search_by_semester(request.args.get('semester'))
+    temp_list = Course_Counts(ans_list_by_sem)
+    ans_list_by_dept = temp_list.search_by_subject(request.args.get('department'))
+    temp_list = Course_Counts(ans_list_by_dept)
+    ans_list_by_core = temp_list.search_by_core(request.args.get('core'))
+    print(ans_list_by_core)
+    return render_template('base.html', result_list=ans_list_by_core)
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.
 
