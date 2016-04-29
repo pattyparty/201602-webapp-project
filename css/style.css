@@ -68,6 +68,22 @@ div.left {
     z-index:1;
 }
 
+#Seal2{
+    position: fixed;
+    top: 20%;
+    left: -20%;
+    opacity: .25;
+    z-index: -2;
+}
+
+#Seal3{
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    opacity: .25;
+    z-index: -2;
+}
+
 #Courses{
     position: relative;
     text-align: center;
@@ -159,4 +175,13 @@ background-color: #3B3937;
     height: 250px;
     background-color: #3B3937;
     z-index: -1;
+}
+
+#CornerCover {
+    position: fixed;
+    left:0px;
+    top:0px;
+    width: 50px;
+    height: 19.2%;
+    background-color: #3B3937;
 }
