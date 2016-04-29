@@ -32,6 +32,7 @@ class TimeFrame:
             return False
 
 
+
 class Course:
     def __init__(self, year, season, department, number, section):
         self.year = year
