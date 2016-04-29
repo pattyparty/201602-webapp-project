@@ -21,20 +21,10 @@
 
 
 <body>
-    <div id="CornerCover">
-    </div>
-
     <div id="Box">
+
     </div>
-
-    <div id="Seal2">
-       <img src="/images/oxy-seal.png" style="width:525px; height:525px;">
-   </div>
-
-    <div id="Seal3">
-       <img src="/images/oxy-seal.png" style="width:525px; height:525px;">
-   </div>
-
+    <p>Course Name: {{ course.title }}</p>
     <p>Units: {{ course.unit }}</p>
     <p>Instructors: {{ course.instructors }}</p>
     <p>Meeting: {{ course.meeting }}</p>
@@ -44,12 +34,6 @@
     <p>Reserved: {{ course.reserved }}</p>
     <p>Reserved open: {{ course.reservedOpen }}</p>
     <p>Waitlisted: {{ course.waitlisted }}</p>
-<br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <p>
         <a href="/">Go Back</a>
     </p><br>

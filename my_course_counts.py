@@ -6,32 +6,6 @@ from flask import Flask, render_template, send_from_directory, request
 app = Flask(__name__)
 
 # FIXME write your app below
-class Time:
-    def __init__(self, time_str): ##03:00pm
-        time_split = time_str.split(':')
-        self.hour = time_split[0]
-        self.min = time_split[1][0:2]
-        self.datetime = time_split[1][2:]
-    def get_hour(self):
-        if self.datetime == 'pm':
-            return int(self.hour) + 12
-        else:
-            return int(self.hour)
-    def get_min(self):
-        return int(self.min)
-
-class TimeFrame:
-    def __init__(self, beginning, end, date):
-        self.beginning = beginning
-        self.end = end
-        self.date = date
-    def checkIfOffered(self, date_str):
-        if date_str in self.date:
-            return True
-        else:
-            return False
-
-
 
 class Course:
     def __init__(self, year, season, department, number, section):
@@ -132,6 +106,7 @@ def get_course_counts():
     return coursecounts
 
 course_counts = get_course_counts()
+
 @app.route('/')
 def view_root():
     ans_list_by_sem = course_counts.search_by_semester(request.args.get('semester'))
