@@ -151,5 +151,12 @@ background-color: #3B3937;
     z-index: 2;
 }
 
-head {
+#Box {
+    position: fixed;
+    left: 34%;
+    top: 150px;
+    width: 425px;
+    height: 250px;
+    background-color: #3B3937;
+    z-index: -1;
 }
