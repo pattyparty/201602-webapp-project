@@ -185,3 +185,7 @@ background-color: #3B3937;
     height: 19.2%;
     background-color: #3B3937;
 }
+
+#CourseChart tr:first-child{
+    color: #F5D68E;
+}
