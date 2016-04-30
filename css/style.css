@@ -118,7 +118,7 @@ div.right {
     top: 60px;
     width:84%;
     z-index: 3;
-    color: #F5D68E;
+    color: #120802;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     background-color: transparent;
     text-align: center;
@@ -140,7 +140,7 @@ color: #DB6014;
 }
 
 
-tr:hover{background-color: #3B3937
+tr:hover{background-color: #F0F5ED
 
 }
 th{
@@ -169,9 +169,9 @@ background-color: #3B3937;
 
 #Box {
     position: fixed;
-    left: 34%;
+    left: 29%;
     top: 150px;
-    width: 425px;
+    width: 540px;
     height: 250px;
     background-color: #3B3937;
     z-index: -1;
